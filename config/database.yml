@@ -1,0 +1,49 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+development:
+  <<: *default
+  database: emoj_development
+  username: Reggie
+  password: " "
+
+  
+test:
+  <<: *default
+  database: emoj_test
+  username: Reggie
+  password: " "
+
+
+production:
+  <<: *default
+  database: emoj_production
+  username: Reggie
+  password: " "
+
+
+# development:
+#   adapter: postgresql
+#   database: emojiweb_development
+#   encoding: unicode
+#   username: Reggie
+#   password: " "
+
+# test:
+#   adapter: postgresql
+#   database: emojiweb_test
+#   encoding: unicode
+#   username: Reggie
+#   password: " "
+
+# production:
+#   adapter: postgresql
+#   database: emojiweb_production
+#   encoding: unicode
+#   username: Reggie
+#   password: " "

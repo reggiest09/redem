@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<%= stylesheet_link_tag "application" %>
+
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+</head>
+<body>
+
+<body>
+
+
+
+<div class="header">
+            <div class="container">
+                <div class="head">
+                    <div class=" logo">
+                        <a href="index.html"><%= image_tag("logo1.svg", :alt => "") %>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header-top">
+                <div class="container">
+                    <div class="col-sm-5 col-md-offset-2  header-login">
+                        <ul>
+                            <% if(!user_signed_in?) %>
+                <li><%= link_to "Sign Up", new_user_registration_path %></li>
+                <li><%= link_to "Login", new_user_session_path %></li>
+              <% else%>
+            <%= image_tag avatar_url(current_user), class: "circle responsive-img avatar-small" %>&nbsp;
+                    <%= current_user.name %>
+                <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+
+
+                  <%end%>
+                        </ul>
+                    </div>
+
+                    <div class="col-sm-5 header-social">
+                        <ul>
+                            <li><a href="#"><i></i></a>
+                            </li>
+                            <li><a href="#"><i class="ic1"></i></a>
+                            </li>
+                            <li><a href="#"><i class="ic2"></i></a>
+                            </li>
+                            <li><a href="#"><i class="ic3"></i></a>
+                            </li>
+                            <li><a href="#"><i class="ic4"></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+
+
+            <div class="container">
+
+                <div class="head-top">
+
+                    <div class="col-sm-8 col-md-offset-2 h_menu4">
+                        <nav class="navbar nav_bottom" role="navigation">
+
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header nav_2">
+                                <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+                                <ul class="nav navbar-nav nav_1">
+                                    <li><a class="color" href="index.html">Home</a>
+                                    </li>
+                                    <li><a class="color4" href="404.html">About</a>
+                                    </li>
+                                    <li><a class="color6" href="contact.html">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+
+                        </nav>
+                    </div>
+                    <div class="col-sm-2 search-right">
+                        <ul class="heart">
+                            <li>
+                                <a href="wishlist.html">
+                                    <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                                </a>
+                            </li>
+                            <li><a class="play-icon popup-with-zoom-anim" href="index.html#small-dialog"><i class="glyphicon glyphicon-search"> </i></a>
+                            </li>
+                        </ul>
+                        <div class="cart box_1">
+                            <a href="checkout.html">
+                                <h3> <div class="total">
+							<span class="simpleCart_total"></span></div>
+							<%= image_tag("cart.png", :alt => "") %></h3>
+
+                            </a>
+                            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
+                            </p>
+
+                        </div>
+                        <div class="clearfix"> </div>
+
+						<!----->
+
+						<!---pop-up-box---->					  
+			
+			<!---//pop-up-box---->
+			
+			
+						<!----->
+			</div>
+			<div class="clearfix"></div>
+		</div>	
+	</div>	
+</div>
+<!--banner-->
+<div class="banner-top">
+	<div class="container">
+		<h1>Sign Up Today</h1>
+		<em></em>
+		
+	</div>
+</div>
+<!--login-->
+
+<div class="container">
+
+		<div class="login">
+		         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+             <%= devise_error_messages! %>
+             
+			
+			<div class="col-md-6 login-do">
+			<h3>Sign up With your email</h3>
+				<div class="login-mail">
+				<i class="glyphicon glyphicon-envelope"></i><%= f.email_field :email, autofocus: true, placeholder: "Email Address" %>
+				</div>
+				<div class="login-mail">
+				<i class="glyphicon glyphicon-lock"></i><%= f.password_field :password,placeholder: "password", autocomplete: "off" %>
+				</div>
+				
+				   <div class="login-mail">
+					<i class="glyphicon glyphicon-lock"></i><%= f.password_field :password_confirmation, placeholder: "Password Confirmation", autocomplete: "off" %>
+				</div>
+				
+				<label class="hvr-skew-backward">
+				<%= f.submit "Sign up" %>
+				</label>
+				
+               
+			
+			</div>
+			<% end %>
+			
+			<div class="col-md-6 login-right">
+				 <h3>Completely Free Account</h3>
+				 
+				 <p>Pellentesque neque leo, dictum sit amet accumsan non, dignissim ac mauris. Mauris rhoncus, lectus tincidunt tempus aliquam, odio 
+				 libero tincidunt metus, sed euismod elit enim ut mi. Nulla porttitor et dolor sed condimentum. Praesent porttitor lorem dui, in pulvinar enim rhoncus vitae. Curabitur tincidunt, turpis ac lobortis hendrerit, ex elit vestibulum est, at faucibus erat ligula non neque.</p>
+				
+                  <%= link_to "Sign up with Facebook", user_facebook_omniauth_authorize_path, class: "btn btn-lg btn-primary" %>
+    <br/><br/>
+			</div>
+			
+			<div class="clearfix"> </div>
+			
+		</div>
+		
+
+<!-- < render "devise/shared/links" %> -->
+
+</div>
+
+<!--login-->
+<!---728x90--->
+			<!--brand-->
+		<div class="container">
+			<div class="brand">
+                    <div class="col-md-3 brand-grid">
+                         <%= image_tag("toya.png", :class => "img-responsive", :alt => "") %>
+                    </div>
+                    <div class="col-md-3 brand-grid">
+                        
+                         <%= image_tag("fafac.png", :class => "img-responsive", :alt => "") %>
+                    </div>
+                    <div class="col-md-3 brand-grid">
+                        
+                         <%= image_tag("lip3.png", :class => "img-responsive", :alt => "") %>
+                    </div>
+                    <div class="col-md-3 brand-grid">
+                        
+                         <%= image_tag("audio2.png", :class => "img-responsive", :alt => "") %>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+			</div>
+			<!--//brand-->
+			</div>
+			
+		</div>
+	<!--//content-->
+	
+		<!--//footer-->
+	<div class="footer">
+	<div class="footer-middle">
+				<div class="container">
+					<div class="col-md-3 footer-middle-in">
+						<a href="index.html"><%= image_tag("logo1.svg",  :alt => "") %>
+						<p>Suspendisse sed accumsan risus. Curabitur rhoncus, elit vel tincidunt elementum, nunc urna tristique nisi, in interdum libero magna tristique ante. adipiscing varius. Vestibulum dolor lorem.</p>
+					</div>
+					
+					
+					
+					
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<ul class="footer-bottom-top">
+                        <li>
+                            <a href="#"><%= image_tag("f1.png", :class => "img-responsive", :alt => "")  %>
+                           
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><%= image_tag("f2.png", :class => "img-responsive", :alt => "") %>
+                           
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><%= image_tag("f3.png", :class => "img-responsive", :alt => "") %> 
+                           
+                            </a>
+                        </li>
+                    </ul>
+					<p class="footer-class">&copy; 2017 Red Emojis. All Rights Reserved |  by  <a href="#" target="_blank">Amanda Bell</a> </p>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!--//footer-->
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+ 
+</body>
+</html>
