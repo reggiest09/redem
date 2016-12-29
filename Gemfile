@@ -24,14 +24,17 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 gem 'devise'
 gem 'modernizr-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem "figaro"
 
+  gem 'activeadmin', github: 'activeadmin'
+  gem 'active_skin'
 
+gem "paperclip", "~> 5.0.0"
+gem 'aws-sdk', '~> 1.6'
 
 
 
