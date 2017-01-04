@@ -1,0 +1,119 @@
+
+                 
+            </div>
+            <div class="clearfix"></div>
+        </div>  
+    </div>  
+</div>
+<!--banner-->
+<div class="banner-top">
+    <div class="container">
+        <h1>Thank You</h1>
+        <em></em>
+        
+    </div>
+</div>
+
+    <div class="single">
+      <div class="container">
+      
+            <div class="col-md-9">
+                
+
+      <section id="content-receipt" class="clearfix">
+      <div id="receipt-container">
+        <div class="dotmatrix left"></div>
+        <div id="receipt-content">
+          <h4 id="receipt-title">Thank You! Your Receipt</h4>
+          <p><strong>Download Now</strong></p>
+          <div id="receipt-details" class="row clearfix">
+            <div class="col-md-4 receipt-left">
+              <p><strong class="font-weight-heavy"><%= @product.title %></strong></p>
+            </div>
+            <div class="col-sm-4">
+            $<%= @product.price %>
+
+            </div>
+          </div>
+
+        <%= link_to'Download', @product.download_url, class: "btn btn-success btn-xs"%>
+<!-- 
+          <button type="button" class="btn btn-success btn-xs">DOWNLOAD</button> -->
+          <footer id="receipt-footer">
+            <small>Your purchase is complete. We hope you enjoy it!</small>
+          </footer>
+        </div>
+        <div class="dotmatrix right"></div>
+      </div>
+      <div id="receipt-shadow"></div>
+    </section>
+
+
+</div>
+
+
+
+
+
+
+         
+                
+
+                
+                <div class="clearfix"> </div>
+                
+    </div>
+    </div>
+    <!--//footer-->
+        <div class="footer">
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="col-md-8 footer-middle-in">
+                        <a href="#"><%= image_tag("logo1.svg",  :alt => "") %>
+                        </a>
+
+                        <p>A new brand of Adult Emojis.</p>
+                    </div>
+
+                    
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+             <div class="footer-bottom">
+                <div class="container">
+                    <ul class="footer-bottom-top">
+                        <li>
+                            <a href="#"><%= image_tag("f1.png", :class => "img-responsive", :alt => "")  %>
+                           
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><%= image_tag("f2.png", :class => "img-responsive", :alt => "") %>
+                           
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><%= image_tag("f3.png", :class => "img-responsive", :alt => "") %> 
+                           
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer-class">&copy; 2017 Red Emojis. All Rights Reserved | Owned by <a href="#" target="_blank">Amanda Bell</a> </p>
+                    <div class="clearfix"> </div>
+                </div>
+            </div> 
+        </div>
+
+
+
+
+
+
+
+
+
+   
+    
+  
+
+

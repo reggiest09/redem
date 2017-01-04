@@ -1,0 +1,156 @@
+
+
+
+
+        
+                        
+            </div>
+            <div class="clearfix"></div>
+        </div>  
+    </div>  
+</div>
+<!--banner-->
+<div class="banner-top">
+    <div class="container">
+        <h1>Check Out</h1>
+        <em></em>
+        
+    </div>
+</div>
+
+    <div class="single">
+      <div class="container">
+      
+          <div class="col-md-9">
+                <div class="col-md-5">
+
+                            <a href="single.html" class="b-link-stroke b-animate-go  thickbox">
+                            <%= link_to image_tag(@product.image.url, alt:""), product_path(@product) %>
+                               
+                               
+                                <div class="b-wrapper1 long-img">
+                                    <p class="b-animate b-from-right    b-delay03 ">Erotic</p>
+                                    <label class="b-animate b-from-right    b-delay03 "></label>
+                                    <h3 class="b-animate b-from-left    b-delay03 ">Emojis</h3>
+                                </div>
+                            </a>
+                            </div>
+
+                            <!---<a href="single.html"><img src="images/pi.jpg" class="img-responsive" alt=""></a>-->
+                        
+                    <div class="col-md-7 single-top-in">
+                        <div class="span_2_of_a1 simpleCart_shelfItem">
+                            <h3><%= @product.title %></h3><h4> Buy Today</h4>
+                            <p class="in-para"> Your Premium Adult Emojis.</p>
+                            <div class="price_single">
+                                <span class="reducedfrom item_price">$1.99</span>
+                                
+                                <div class="clearfix"></div>
+                            </div>
+
+                            <h4 class="quick">Quick Overview:</h4>
+                            <p class="quick_desc"> Red Emojis does not process any order payments through the website. All payments are processed securely through Stripe, a third party online payment provider. Feel free to contact us about our security policies.
+
+                             </p>
+                             
+                            
+                            
+                            <!--quantity-->
+                           
+                            <!--quantity-->
+
+                            
+                                      <%= form_tag charges_path, id:'chargeForm' do %>
+
+                    <% if flash[:error].present? %>
+                      <div id="error_explanation">
+                        <p><%= flash[:error] %></p>
+                      </div>
+                    <% end %>
+
+                  <script src="https://checkout.stripe.com/checkout.js"></script>
+                  <%= hidden_field_tag 'stripeToken' %>
+                  <%= hidden_field_tag 'amount',  (@product.price * 100).floor %>
+                  <%= hidden_field_tag 'stripeEmail' %>
+                  <%= hidden_field_tag 'product_id', @product.id %>
+
+                  <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>Buy this!</button>
+<script>
+    var handler = StripeCheckout.configure({
+      key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+      token: function(token, arg) {
+        document.getElementById("stripeToken").value = token.id;
+        document.getElementById("stripeEmail").value = token.email;
+        document.getElementById("chargeForm").submit();
+      }
+});
+document.getElementById('btn-buy').addEventListener('click', function(e) {
+      handler.open({
+        name: 'Red Emojis',
+        description: '<%= @product.title %> ($<%= @product.price %>)',
+        amount: document.getElementById("amount").value
+    });
+    e.preventDefault();
+   })
+</script>
+<% end %>
+                            <div class="clearfix"> </div>
+                            
+                        </div>
+                        
+
+                    </div>
+                    <div class="clearfix"> </div>
+                    <!---->
+                    
+                  
+                    
+                </div>
+                
+
+                
+                <div class="clearfix"> </div>
+                
+    </div>
+    </div>
+    <!--//footer-->
+        <div class="footer">
+            <div class="footer-middle">
+                <div class="container">
+                    <div class="col-md-8 footer-middle-in">
+                        <a href="#"><%= image_tag("logo1.svg",  :alt => "") %>
+                        </a>
+
+                        <p>A new brand of Adult Emojis.</p>
+                    </div>
+
+                    
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+             <div class="footer-bottom">
+                <div class="container">
+                    <ul class="footer-bottom-top">
+                        <li>
+                            <a href="#"><%= image_tag("f1.png", :class => "img-responsive", :alt => "")  %>
+                           
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><%= image_tag("f2.png", :class => "img-responsive", :alt => "") %>
+                           
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"><%= image_tag("f3.png", :class => "img-responsive", :alt => "") %> 
+                           
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="footer-class">&copy; 2017 Red Emojis. All Rights Reserved | Owned by <a href="#" target="_blank">Amanda Bell</a> </p>
+                    <div class="clearfix"> </div>
+                </div>
+            </div> 
+        </div>
+
+

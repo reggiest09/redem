@@ -105,17 +105,7 @@
                             <li><a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i></a>
                             </li>
                         </ul>
-                        <div class="cart box_1">
-                            <a href="#">
-                                <h3> <div class="total">
-							<span class="simpleCart_total"></span></div>
-							<%= image_tag("cart.png", :alt => "") %></h3>
-
-                            </a>
-                            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a>
-                            </p>
-
-                        </div>
+                        <!-- cart -->
                         <div class="clearfix"> </div>
 
 						<!----->
@@ -140,8 +130,8 @@
 
 <div class="container">
 
-		<div class="login">
-		         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+		 <div class="login">
+              <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
              <%= devise_error_messages! %>
 			
 			<div class="col-md-6 login-do">

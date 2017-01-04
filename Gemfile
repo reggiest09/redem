@@ -8,6 +8,12 @@ gem 'pg', '~> 0.15'
 gem 'rails_12factor'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+gem 'stripe'
+gem "letter_opener", :group => :development
+
+group :development do
+  gem "better_errors"
+end
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
