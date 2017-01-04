@@ -282,7 +282,7 @@ PLATFORMS
 DEPENDENCIES
   active_skin
   activeadmin!
-  aws-sdk (~> 1.6)
+  aws-sdk (< 2.0)
   better_errors
   bootstrap-sass (~> 3.3, >= 3.3.6)
   byebug

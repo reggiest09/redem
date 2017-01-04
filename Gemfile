@@ -40,7 +40,8 @@ gem "figaro"
   gem 'active_skin'
 
 gem "paperclip", "~> 5.0.0"
-gem 'aws-sdk', '~> 1.6'
+gem 'aws-sdk', '< 2.0'
+
 
 
 
