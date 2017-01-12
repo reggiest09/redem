@@ -1,212 +1,255 @@
-<!--header-->
+
+
+
+<div class="typewriter_wrapper">
+  <div class="inside">
+    <span>Welcome To RedEmojis.com 😊</span>
+    <div class='symbol'>|</div>
+  </div>
+</div>
+<button id="replay">replay</button>
+
+  <div class="container">
+    <div id="about-section" class="section">
+      <div class="row">
+        <div class="col m8">
+          
         
 
-                        
-                       
-                       
-                        <!----->
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
+
+
+
+
+
+
+
+
+
+          <p id="about-me-text" class="right-align">
+            Welcome to Red Emojis.. street art direct trade whatever cliche. Art party pop-up hoodie, narwhal keytar sustainable organic freegan umami fashion axe. Drinking vinegar semiotics shabby chic tacos vice bespoke, chia jean shorts authentic truffaut meh literally put a bird on it mlkshk art party.
+
+            
+
+          </p>
+          <hr> -->
+          <p id="qualifications" class="right-align">
+            
+           
+            
+         
+           
+
         </div>
-        <!--banner-->
-        <div class="banner">
-            <div class="container">
-                <section class="rw-wrapper">
-                    <h1 class="rw-sentence">
-					<span>Red Emoji's</span>
-					<div class="rw-words rw-words-1">
-						<span>Faces</span>
-						<span>Fruit</span>
-						<span> Toys</span>
-						<span>Positions</span>
-						<span>Miscellaneous</span>
-						<span>Lips</span>
+        <div class="col m4 center-align">
+          
+
+
+
+          
+
+
+        </div>
+      </div>
+    </div>
+    <br>
+     
+		<div id="portfolio-section" class="section">
+			
+      <div class="row">
+        <div class="col m6 offset-m3 center-align">
+          <h3 class="center-align">
+            X-Audio Free Sample
+          <%= audio_tag "bye.wav", class: "audio-play" %> 
+           <p class="btn btn-lg audioButton">Play</p> 
+          </h3>
+          </div>
+          </div>
+          <br>
+          <div class="row">
+        <div class="col m6 offset-m3 center-align">
+          <h2 class="center-align">
+          Buy Today
+          </h2>
+          
+        </div>
+      </div>
+
+	<div class="row">
+        <% @products.each do |product| %>
+        <div class="col s12 m6">
+        
+          <div class="card">
+          <div style="display: inline-block; position: absolute; top: -11px; right: -11px; z-index: 10;">
+          <!-- <img class="activator" src="https://s19.postimg.org/hu8uz903n/new-posts.png"> -->
+
+          <%= image_tag("NB.png", :class => "activator") %>
+        </div>
+            <div class="card-image">
+              <%= link_to image_tag(product.image.url, alt: ""), product_path(product) %>
+                  
+                 <span class="card-title"><%= product.title%></span>
+            </div>
+
+
+            <div class="card-content">
+              <p><%= product.subtitle%></p>
+            </div>
+            <div class="card-action">
+             <%=  number_to_currency(product.price) %></a>
+            </div>
+          </div>
+       
+        </div>
+<% end %>
+     </div>
+
+
+            <!-- end of container -->
+		</div>
+
+
+
+       
+
+		
+
+
+
+
+
+
+
+
+
+
+
+		<div id="contact-section" class="section">
+			<div class="row">
+				<div class="col m12">
+					<h2 class="center-align">Contact Me</h2>
+					<hr>
+				</div>
+			</div>
+			<div class="row">
+				<form action="" class="col m5">
+					<div class="row">
+						<div class="input-field col m12">
+							<input id="full_name" type="text" class="validate">
+							<label for="first_name">Full Name</label>
+						</div>
 					</div>
-					<div class="rw-words rw-words-2">
-						<span>Our Collection</span>
-						<span>X- fruit</span>
-						<span>X- Toys</span>
-						<span>X- Positions</span>
-						<span>X- Miscellaneous</span>
-						<span>X- Lips</span>
+					<div class="row">
+						<div class="input-field col m12">
+							<input id="email" type="email" class="validate">
+							<label for="email">Email</label>
+						</div>
 					</div>
-				</h1>
-                </section>
-            </div>
-        </div>
-        <!---728x90--->
-        <!--content-->
-        <div class="content">
-            <div class="container">
-                <div class="content-top">
-                    <div class="col-md-6 col-md">
-                        <div class="col-1">
-                            <a href="#" class="b-link-stroke b-animate-go  thickbox">
-                                
-                                <%= image_tag("we1.png", :class =>"img-responsive", :alt => "") %>
-                                <div class="b-wrapper1 long-img">
-                                    <p class="b-animate b-from-right    b-delay03 ">Delious</p>
-                                    <label class="b-animate b-from-right    b-delay03 "></label>
-                                    <h3 class="b-animate b-from-left    b-delay03 ">Faces</h3>
-                                </div>
-                            </a>
+					<div class="row">
+						<div class="input-field col m12">
+							<textarea id="textarea1" class="materialize-textarea"></textarea>
+							<label for="textarea1">Message</label>
+						</div>
+					</div>
+				</form>
+				<div class="col m5 offset-m2">
+					<div class="row">
+						<p>
+							Thanks for visiting redemojis.com. Plese return for more excting emojis and products. If you have any questions pleae contact me.
+						</p>
+					</div>
+					<div class="row">
+						<p>
+							I promise to reply A.S.A.P.
+						</p>
+					</div>
+					<div class="row">
+						<p>
+							Note: No spam/soliciting pour moi, merci :)
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
 
-                            <!---<a href="single.html"><img src="images/pi.jpg" class="img-responsive" alt=""></a>-->
-                        </div>
-                        <div class="col-2">
-                            <span>Hot Deal</span>
-                            <h2><a href="#">Luxurious &amp; Trendy</a></h2>
-                            <p>X-Faces available now.</p>
-                            
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-md1">
-                        <div class="col-3">
-                            <a href="#"><%= image_tag("what.png", :class =>"img-responsive", :alt => "") %>
 
-                                <div class="col-pic">
-                                    <p>Collection</p>
-                                    <label></label>
-                                    <h5>X-Faces</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="#"><%= image_tag("frui.png", :class => "img-responsive", :alt => "") %>
-                            
-                                <div class="col-pic">
-                                    <p>Collection</p>
-                                    <label></label>
-                                    <h5>X-Fruit</h5>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-3">
-                            <a href="#"><%= image_tag("toy2.png", :class => "img-responsive", :alt => "") %>
-                            
-                                <div class="col-pic">
-                                    <p>Collection</p>
-                                    <label></label>
-                                    <h5>X-Toys</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <!--products-->
-                <div class="content-mid">
-                    <h3>Trending Emojis</h3>
-                    <label class="line"></label>
+	</div>
 
-                    <div class="mid-popular">
-                    <% @products.each do |product| %>
-                        <div class="col-md-3 item-grid simpleCart_shelfItem">
-                            <div class=" mid-pop">
-                                <div class="pro-img">
-                                
-                                   
-                                  <%= link_to image_tag(product.image.url, alt:""), product_path(product) %>
 
-                                   
-                                    
-                                </div>
-                                <div class="mid-1">
-                                    <div class="women">
-                                        <div class="women-top">
-                                            <span><%= product.title%></span>
-                                            <h6><a href="#"><%= product.subtitle%> </a></h6>
-                                        </div>
-                                        <div class="img item_add">
-                                            <a href="#"><%= image_tag("ca.png",  :alt => "") %>
-                                            
-                                        </div>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                    <div class="mid-2">
-                                        <p>
-                                            <label>$3.99</label><em class="item_price"><%=  number_to_currency(product.price) %></em>
-                                        </p>
-                                        <div class="block">
-                                            <div class="starbox small ghosting"> </div>
-                                        </div>
 
-                                        <div class="clearfix"></div>
-                                    </div>
 
-                                </div>
-                            </div>
-                        </div>
-                        <% end %>
-                       
-                        
-                      
-                </div>
-                <!--//products-->
-                <!---728x90--->
-                <!--brand-->
-                <div class="brand">
-                    <div class="col-md-3 brand-grid">
-                         <%= image_tag("toya.png", :class => "img-responsive", :alt => "") %>
-                    </div>
-                    <div class="col-md-3 brand-grid">
-                        
-                         <%= image_tag("fafac.png", :class => "img-responsive", :alt => "") %>
-                    </div>
-                    <div class="col-md-3 brand-grid">
-                        
-                         <%= image_tag("lip3.png", :class => "img-responsive", :alt => "") %>
-                    </div>
-                    <div class="col-md-3 brand-grid">
-                        
-                         <%= image_tag("audio2.png", :class => "img-responsive", :alt => "") %>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <!--//brand-->
-            </div>
 
-        </div>
-        <!--//content-->
-        <!--//footer-->
-        <div class="footer">
-            <div class="footer-middle">
-                <div class="container">
-                    <div class="col-md-8 footer-middle-in">
-                        <a href="#"><%= image_tag("logo1.svg",  :alt => "") %>
-                        </a>
 
-                        <p>A new brand of adult emojis.</p>
-                    </div>
 
-                    
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-             <div class="footer-bottom">
-                <div class="container">
-                    <ul class="footer-bottom-top">
-                        <li>
-                            <a href="#"><%= image_tag("f1.png", :class => "img-responsive", :alt => "")  %>
-                           
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><%= image_tag("f2.png", :class => "img-responsive", :alt => "") %>
-                           
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><%= image_tag("f3.png", :class => "img-responsive", :alt => "") %> 
-                           
-                            </a>
-                            
-                        </li>
-                    </ul>
-                    <p class="footer-class">&copy; 2017 Red Emojis. All Rights Reserved | Owned by <a href="#" target="_blank">Amanda Bell</a> </p>
-                    <div class="clearfix"> </div>
-                </div>
-            </div> 
-        </div>
+
+	<footer class="page-footer red accent-4">
+		<div class="container">
+			<div class="row">
+				<div class="center-align col-md-3">
+					 <a class="footer-icon-link btn-floating waves-effect waves-light">
+						 <i class="fa fa-facebook footer-icon" aria-hidden="true"></i>
+					 </a>
+					 <a class="footer-icon-link btn-floating waves-effect waves-light">
+						 <i class="fa fa-twitter footer-icon" aria-hidden="true"></i>
+					 </a>
+					 <a class="footer-icon-link btn-floating waves-effect waves-light">
+						<i class="fa fa-instagram footer-icon" aria-hidden="true"></i>
+					 </a>
+				</div>
+			</div>
+
+
+        
+
+
+
+			<div class="row">
+				<div class="center-align col-md-3">
+					<p>Stay Tuned More To Come</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<footer id="second-footer" class="page-footer red accent-4">
+		<div class="container">
+			<div class="row">
+				<div class="center-align col-md-3">
+					<p>Amanda Bell &copy; 2017. All Rights Reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+  <script type="text/javascript">
+   var wrap = document.getElementsByClassName("typewriter_wrapper")[0],
+    txtEl = wrap.getElementsByTagName('span')[0],
+    txt = txtEl.innerHTML,
+    speed;
+
+function typewriter() {
+
+  // Delete old Text
+  txtEl.innerHTML = "";
+  
+  var count = 0,
+      len =  txt.length;
+  
+  var i = setInterval(function(){
+    txtEl.innerHTML = txt.substr(0, count);
+    count++;
+    if(count === len + 1) {
+      clearInterval(i);
+    }
+  }, 100) ;
+}
+
+document.getElementById("replay").addEventListener("click", function(){
+    typewriter();
+});
+
+typewriter();
+     
+
+
+
+   </script>
+
+  

@@ -12,9 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap-sprockets
-//= require simpleCart.min.js
-//= require jquery.chocolat.js
-//= require jquery.flexslider
+//= require materialize-sprockets
+//= require turbolinks
 //= require_tree .
-

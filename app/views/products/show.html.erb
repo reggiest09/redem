@@ -1,66 +1,54 @@
-
-
-
-
-        
-                        
-            </div>
-            <div class="clearfix"></div>
-        </div>  
-    </div>  
-</div>
-<!--banner-->
-<div class="banner-top">
-    <div class="container">
-        <h1>Check Out</h1>
-        <em></em>
-        
+<div class="container">
+<div class="col s12 m8 ">
+  <div class="card-panel grey lighten-5 ">
+    <div class="row valign-wrapper">
+      <div class="col s3 m2 l2">
+       <%= image_tag "ab.png", class: "circle responsive-img"%>
+      </div>
+      <div class="col s9 m10 l10">
+        <span class="black-text">
+          <h4>Thank you</h4>
+        </span>
+      </div>
     </div>
+  </div>
+</div>
 </div>
 
-    <div class="single">
-      <div class="container">
-      
-          <div class="col-md-9">
-                <div class="col-md-5">
 
-                            <a href="single.html" class="b-link-stroke b-animate-go  thickbox">
-                            <%= link_to image_tag(@product.image.url, alt:""), product_path(@product) %>
-                               
-                               
-                                <div class="b-wrapper1 long-img">
-                                    <p class="b-animate b-from-right    b-delay03 ">Erotic</p>
-                                    <label class="b-animate b-from-right    b-delay03 "></label>
-                                    <h3 class="b-animate b-from-left    b-delay03 ">Emojis</h3>
-                                </div>
-                            </a>
-                            </div>
 
-                            <!---<a href="single.html"><img src="images/pi.jpg" class="img-responsive" alt=""></a>-->
-                        
-                    <div class="col-md-7 single-top-in">
-                        <div class="span_2_of_a1 simpleCart_shelfItem">
-                            <h3><%= @product.title %></h3><h4> Buy Today</h4>
-                            <p class="in-para"> Your Premium Adult Emojis.</p>
-                            <div class="price_single">
-                                <span class="reducedfrom item_price">$1.99</span>
-                                
-                                <div class="clearfix"></div>
-                            </div>
 
-                            <h4 class="quick">Quick Overview:</h4>
-                            <p class="quick_desc"> Red Emojis does not process any order payments through the website. All payments are processed securely through Stripe, a third party online payment provider. Feel free to contact us about our security policies.
+<div class="container">
+    <div class="row">
+      <div class="col s12 m8">
+        <h4>You Selected </h4> <h3><%= @product.title %></h3>
+          <div class="card-image">
+            <%= link_to image_tag(@product.image.url, alt:""), product_path(@product) %>
+           
 
-                             </p>
-                             
-                            
-                            
-                            <!--quantity-->
-                           
-                            <!--quantity-->
+        </div>
+      </div>
+      <div class="col s12 m4">
+       <ul class="collapsible" data-collapsible="accordion">
+    <li>
 
-                            
-                                      <%= form_tag charges_path, id:'chargeForm' do %>
+
+      <div class="collapsible-header active"><i class="material-icons">filter_drama</i>Step 1</div>
+      <div class="collapsible-body"><p>Complete your Purchase.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">place</i>Step 2</div>
+      <div class="collapsible-body"><p>Download your purchase from your receipt.</p></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Step 3</div>
+      <div class="collapsible-body"><p>Unzip and copy your red emoji's to over to your phone.</p></div>
+    </li>
+  </ul>
+        
+      </div>
+    </div>
+<%= form_tag charges_path, id:'chargeForm' do %>
 
                     <% if flash[:error].present? %>
                       <div id="error_explanation">
@@ -94,63 +82,45 @@ document.getElementById('btn-buy').addEventListener('click', function(e) {
    })
 </script>
 <% end %>
-                            <div class="clearfix"> </div>
-                            
-                        </div>
-                        
 
-                    </div>
-                    <div class="clearfix"> </div>
-                    <!---->
-                    
-                  
-                    
-                </div>
-                
 
-                
-                <div class="clearfix"> </div>
-                
-    </div>
-    </div>
-    <!--//footer-->
-        <div class="footer">
-            <div class="footer-middle">
-                <div class="container">
-                    <div class="col-md-8 footer-middle-in">
-                        <a href="#"><%= image_tag("logo1.svg",  :alt => "") %>
-                        </a>
 
-                        <p>A new brand of Adult Emojis.</p>
-                    </div>
-
-                    
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-             <div class="footer-bottom">
-                <div class="container">
-                    <ul class="footer-bottom-top">
-                        <li>
-                            <a href="#"><%= image_tag("f1.png", :class => "img-responsive", :alt => "")  %>
-                           
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><%= image_tag("f2.png", :class => "img-responsive", :alt => "") %>
-                           
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#"><%= image_tag("f3.png", :class => "img-responsive", :alt => "") %> 
-                           
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="footer-class">&copy; 2017 Red Emojis. All Rights Reserved | Owned by <a href="#" target="_blank">Amanda Bell</a> </p>
-                    <div class="clearfix"> </div>
-                </div>
-            </div> 
+          </div>
+          <footer class="page-footer red accent-4">
+    <div class="container">
+      <div class="row">
+        <div class="center-align col-md-3">
+           <a class="footer-icon-link btn-floating waves-effect waves-light">
+             <i class="fa fa-facebook footer-icon" aria-hidden="true"></i>
+           </a>
+           <a class="footer-icon-link btn-floating waves-effect waves-light">
+             <i class="fa fa-twitter footer-icon" aria-hidden="true"></i>
+           </a>
+           <a class="footer-icon-link btn-floating waves-effect waves-light">
+            <i class="fa fa-instagram footer-icon" aria-hidden="true"></i>
+           </a>
         </div>
+      </div>
 
+
+        
+
+
+
+      <div class="row">
+        <div class="center-align col-md-3">
+          <p>Stay Tuned More To Come</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <footer id="second-footer" class="page-footer red accent-4">
+    <div class="container">
+      <div class="row">
+        <div class="center-align col-md-3">
+          <p>Amanda Bell &copy; 2017. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
