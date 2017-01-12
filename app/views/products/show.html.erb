@@ -7,7 +7,7 @@
       </div>
       <div class="col s9 m10 l10">
         <span class="black-text">
-          <h4>Thank you</h4>
+          <h4>Please complete your purchase</h4>
         </span>
       </div>
     </div>
@@ -33,16 +33,16 @@
     <li>
 
 
-      <div class="collapsible-header active"><i class="material-icons">filter_drama</i>Step 1</div>
-      <div class="collapsible-body"><p>Complete your Purchase.</p></div>
+      <div class="collapsible-header active"><i class="material-icons">filter_drama</i><h4>Step 1</h4></div>
+      <div class="collapsible-body"><h4>Complete your Purchase.</h3></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Step 2</div>
-      <div class="collapsible-body"><p>Download your purchase from your receipt.</p></div>
+      <div class="collapsible-header"><i class="material-icons">place</i><h4>Step 2</h4></div>
+      <div class="collapsible-body"><h3>Download purchase from receipt.</h3></div>
     </li>
     <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Step 3</div>
-      <div class="collapsible-body"><p>Unzip and copy your red emoji's to over to your phone.</p></div>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i><h4>Step 3</h4> </div>
+      <div class="collapsible-body"><h3>Unzip and copy your red emoji's to over to your phone.</h3></div>
     </li>
   </ul>
         
@@ -62,7 +62,7 @@
                   <%= hidden_field_tag 'stripeEmail' %>
                   <%= hidden_field_tag 'product_id', @product.id %>
 
-                  <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span>Buy this!</button>
+                   <button id="btn-buy" type="button" class="waves-effect waves-light btn-large"><h4>Buy Now</h4></button><br/>
 <script>
     var handler = StripeCheckout.configure({
       key: '<%= ENV['STRIPE_PUBLIC_KEY'] %>',
